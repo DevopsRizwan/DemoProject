@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html> -->
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Welcome To CTS LMS</title>
+</head>
+<body>
+<%!String username,password; %>
+<%username=request.getParameter("username"); %>
+<%password=request.getParameter("password");
+if(username!="" && password!="")
+   {
+        if(username.equalsIgnoreCase("rizwan")&&
+password.equalsIgnoreCase("riz1234"))
+        {%>
+        <h1>!!!!!   Hello <%=username%> Welcome To your Library  !!!!</h1>
+    <%}
+        else
+        {%>
+          <font color=red><b>Please input Correct Credentials</b></font>
+   <%}}
+  else
+        {%>
+  <font color=red><b>User Name or Password Shouldn't be blank</b></font>
+   <%}%>
+
+</body>
+</html>
